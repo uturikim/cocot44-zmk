@@ -85,7 +85,6 @@
         };
     };
 };
-
 &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
@@ -97,12 +96,12 @@
     trackball: trackball@0 {
         status = "okay";
         compatible = "pixart,pmw3610";
-        reg = ;
+        reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio1 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         cpi = <600>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
+        evt-type = <0x02>;
+        x-input-code = <0x00>;
+        y-input-code = <0x01>;
     };
 };
